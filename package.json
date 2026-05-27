@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && git -C dist init && git -C dist remote add origin https://github.com/SIMPLX0/SIMPLX.git && git -C dist checkout -b gh-pages && git -C dist add . && git -C dist commit -m \"Deploy to GitHub Pages\" && git -C dist push origin gh-pages --force"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
